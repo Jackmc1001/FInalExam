@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Name="lblListing" Grid.Row="0" Grid.Column="0" Content="Property Listing" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <ListBox x:Name ="lbxPropertyList" Grid.Row="1" Grid.Column="0" Margin="20"/>
+        <TextBlock x:Name ="tblkDescription" Grid.Column="1" Grid.Row="1" Margin="20"/>
+
+
     </Grid>
 </Window>
