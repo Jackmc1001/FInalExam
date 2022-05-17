@@ -20,11 +20,22 @@ namespace FinalExam
     /// </summary>
     public partial class MainWindow : Window
     {
+        RentalData db = new RentalData();
         public MainWindow()
         {
             InitializeComponent();
 
 
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var query = from c in db.RentalProperties
+                        orderby c.Price ascending
+                        select c.Location;
+                        
+
+            lbxPropertyList.ItemsSource = query.ToList();
         }
     }
 }
