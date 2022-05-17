@@ -65,6 +65,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Migrations\202205170915521_InitialCreate.cs" />
+    <Compile Include="Migrations\202205170915521_InitialCreate.designer.cs">
+      <DependentUpon>202205170915521_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205170950345_AddImages.cs" />
+    <Compile Include="Migrations\202205170950345_AddImages.designer.cs">
+      <DependentUpon>202205170950345_AddImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RentalProperty.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -93,6 +102,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202205170915521_InitialCreate.resx">
+      <DependentUpon>202205170915521_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205170950345_AddImages.resx">
+      <DependentUpon>202205170950345_AddImages.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,6 +120,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\flat.png" />
+    <Resource Include="images\house.png" />
+    <Resource Include="images\share.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
