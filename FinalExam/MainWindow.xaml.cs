@@ -48,5 +48,12 @@ namespace FinalExam
 
             tblkDescription.Text = query;
         }
+
+        private void AddWindow_Click(object sender, RoutedEventArgs e)
+        {
+            NewPropert newwindow = new NewPropert();
+
+            newwindow.Show();
+        }
     }
 }
