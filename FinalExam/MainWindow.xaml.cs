@@ -30,6 +30,7 @@ namespace FinalExam
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //loads listbox with content from database
             var query = from c in db.RentalProperties
                         orderby c.Price ascending
                         select c;
@@ -40,6 +41,7 @@ namespace FinalExam
 
         private void lbxPropertyList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //displays the descriptoon
             RentalProperty r1 = (RentalProperty)lbxPropertyList.SelectedItem;
 
             var query = (from c in db.RentalProperties
@@ -51,6 +53,7 @@ namespace FinalExam
 
         private void AddWindow_Click(object sender, RoutedEventArgs e)
         {
+            //use to load new window
             NewPropert newwindow = new NewPropert();
 
             newwindow.Show();
