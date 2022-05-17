@@ -27,7 +27,10 @@ namespace FinalExam
             
 
         }
-
+        public override string ToString()
+        {
+            return Location;
+        }
 
     }
     public class RentalData : DbContext

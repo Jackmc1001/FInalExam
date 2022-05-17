@@ -23,7 +23,7 @@
 
         <Label Name="lblListing" Grid.Row="0" Grid.Column="0" Content="Property Listing" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="112,29,82,29"/>
 
-        <ListBox x:Name ="lbxPropertyList" Grid.Row="1" Grid.Column="0" Margin="20" Grid.ColumnSpan="2"/>
+        <ListBox x:Name ="lbxPropertyList" Grid.Row="1" Grid.Column="0" Margin="20" Grid.ColumnSpan="2" SelectionChanged="lbxPropertyList_SelectionChanged"/>
         <TextBlock x:Name ="tblkDescription" Grid.Column="2" Grid.Row="1" Margin="20"/>
 
 

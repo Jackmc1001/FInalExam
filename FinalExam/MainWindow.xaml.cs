@@ -32,10 +32,21 @@ namespace FinalExam
         {
             var query = from c in db.RentalProperties
                         orderby c.Price ascending
-                        select c.Location;
+                        select c;
                         
 
             lbxPropertyList.ItemsSource = query.ToList();
+        }
+
+        private void lbxPropertyList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RentalProperty r1 = (RentalProperty)lbxPropertyList.SelectedItem;
+
+            var query = (from c in db.RentalProperties
+                         where c.ID == r1.ID
+                         select c.Description).First();
+
+            tblkDescription.Text = query;
         }
     }
 }
